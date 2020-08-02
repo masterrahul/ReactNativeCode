@@ -4,6 +4,7 @@ Hii Friends
 
 Thanks for watching
 Please like and subscribe my channel for react native video
+https://www.youtube.com/channel/UCn8JtJEh41wCs8A9tqSImfQ
 
 step 1. react-native init LoginRedux
 step 2. install all these library
