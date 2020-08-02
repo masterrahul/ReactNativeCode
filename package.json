@@ -1,0 +1,51 @@
+{
+  "name": "LoginRedux",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "postinstall": "npx jetify && cd ios && pod install",
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "start:reset": "npm run start --reset-cache",
+    "test": "jest",
+    "ios": "react-native run-ios",
+    "android": "react-native run-android",
+    "android:release": "cd android && ./gradlew app:assembleRelease",
+    "android:clean": "cd android && ./gradlew clean && ./gradlew cleanBuildCache",
+    "reinstall": "rm -rf node_modules && npm install",
+    "clean": "watchman watch-del-all && rm -rf /tmp/metro-bundler-cache-* && rm -rf /tmp/haste-map-react-native-packager-*",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@react-native-community/async-storage": "^1.11.0",
+    "@react-native-community/masked-view": "^0.1.10",
+    "@react-native-community/netinfo": "^5.9.5",
+    "@react-navigation/native": "^5.7.0",
+    "@react-navigation/stack": "^5.0.6",
+    "apisauce": "^1.1.1",
+    "react": "16.13.1",
+    "react-native": "0.63.1",
+    "react-native-gesture-handler": "^1.6.1",
+    "react-native-material-textfield": "^0.16.1",
+    "react-native-offline": "^5.7.0",
+    "react-native-reanimated": "^1.9.0",
+    "react-native-safe-area-context": "^3.1.1",
+    "react-native-screens": "^2.9.0",
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.5",
+    "redux-persist": "^6.0.0",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.5",
+    "@babel/runtime": "^7.10.5",
+    "@react-native-community/eslint-config": "^2.0.0",
+    "babel-jest": "^26.1.0",
+    "eslint": "^7.5.0",
+    "jest": "^26.1.0",
+    "metro-react-native-babel-preset": "^0.60.0",
+    "react-test-renderer": "16.13.1"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
